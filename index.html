@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ihbrazil Full Stack - Captura de Leads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>ihbrazil <span>Full Stack</span></h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <h2 class="hero-title">Transforme sua ideia em realidade digital</h2>
+                <p class="hero-subtitle">Conte-nos sobre seu projeto e receba uma proposta personalizada</p>
+            </div>
+
+            <div class="form-container">
+                <form id="leadForm" class="lead-form">
+                    <div class="form-group">
+                        <label for="nome" class="form-label">Nome completo</label>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            class="form-input" 
+                            placeholder="Digite seu nome completo"
+                            required
+                        >
+                        <div class="error-message" id="nome-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="seu@email.com"
+                            required
+                        >
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_de_projeto" class="form-label">Tipo de projeto</label>
+                        <select 
+                            id="tipo_de_projeto" 
+                            name="tipo_de_projeto" 
+                            class="form-select" 
+                            required
+                        >
+                            <option value="">Selecione o tipo de projeto</option>
+                            <option value="Site Institucional">Site Institucional</option>
+                            <option value="E-commerce">E-commerce</option>
+                            <option value="Aplicação Web">Aplicação Web</option>
+                        </select>
+                        <div class="error-message" id="tipo_de_projeto-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detalhes_adicionais" class="form-label">Detalhes adicionais</label>
+                        <textarea 
+                            id="detalhes_adicionais" 
+                            name="detalhes_adicionais" 
+                            class="form-textarea" 
+                            placeholder="Descreva seu projeto, funcionalidades desejadas, prazo, orçamento ou qualquer informação relevante..."
+                            rows="5"
+                            required
+                        ></textarea>
+                        <div class="error-message" id="detalhes_adicionais-error"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Enviar Projeto</span>
+                        <div class="loading-spinner" id="loadingSpinner"></div>
+                    </button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">✓</div>
+                    <h3>Projeto enviado com sucesso!</h3>
+                    <p>Recebemos suas informações e entraremos em contato em breve.</p>
+                </div>
+
+                <div class="error-alert" id="errorAlert">
+                    <div class="error-icon">!</div>
+                    <h3>Erro ao enviar projeto</h3>
+                    <p id="errorMessage">Ocorreu um erro inesperado. Tente novamente.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 ihbrazil Full Stack. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
